@@ -1,0 +1,93 @@
+# ============================================================================
+# Requirements.txt pour EHR-M-GAN + Preprocessing eICU
+# Projet complet : Génération de données synthétiques EHR
+# ============================================================================
+
+# ============================================================================
+# DEEP LEARNING - TensorFlow (pour EHR-M-GAN)
+# ============================================================================
+tensorflow==2.10.1          # Framework principal pour GAN
+# Alternative pour GPU (choisir l'un ou l'autre) :
+# tensorflow-gpu==2.10.1
+
+keras==2.10.0               # API haut niveau (inclus avec TF 2.x)
+
+# ============================================================================
+# TRAITEMENT DE DONNÉES
+# ============================================================================
+numpy==1.23.5               # Calcul numérique
+pandas==1.5.3               # Manipulation de données tabulaires
+scipy==1.10.1               # Calcul scientifique
+
+# ============================================================================
+# PREPROCESSING eICU
+# ============================================================================
+tqdm==4.65.0                # Barres de progression
+openpyxl==3.1.2             # Lecture/écriture Excel (optionnel)
+
+# ============================================================================
+# VISUALISATION & ÉVALUATION
+# ============================================================================
+matplotlib==3.7.1           # Graphiques de base
+seaborn==0.12.2             # Visualisations statistiques
+plotly==5.14.1              # Graphiques interactifs (optionnel)
+
+# ============================================================================
+# MACHINE LEARNING - Évaluation
+# ============================================================================
+scikit-learn==1.2.2         # Métriques, classification
+# Pour les métriques d'évaluation :
+# - MMD (Maximum Mean Discrepancy)
+# - Discriminative score
+# - Dimension-wise probability
+
+# ============================================================================
+# JUPYTER NOTEBOOK (pour training.ipynb)
+# ============================================================================
+jupyter==1.0.0              # Environnement notebook
+ipython==8.12.0             # Shell interactif amélioré
+notebook==6.5.4             # Interface Jupyter Notebook
+
+# ============================================================================
+# UTILITAIRES
+# ============================================================================
+pathlib==1.0.1              # Manipulation de chemins (inclus dans Python 3.4+)
+
+# ============================================================================
+# COMPATIBILITÉ & OUTILS
+# ============================================================================
+protobuf==3.19.6            # Sérialisation (requis par TensorFlow)
+h5py==3.8.0                 # Format HDF5 pour sauvegardes modèles
+pyyaml==6.0                 # Lecture fichiers YAML (optionnel)
+
+# ============================================================================
+# DÉVELOPPEMENT (optionnel)
+# ============================================================================
+# pytest==7.3.1             # Tests unitaires
+# black==23.3.0             # Formatage code Python
+# flake8==6.0.0             # Linter Python
+# ipdb==0.13.13             # Debugger interactif
+
+# ============================================================================
+# NOTES D'INSTALLATION
+# ============================================================================
+#
+# Installation standard :
+#   pip install -r requirements.txt
+#
+# Pour GPU (NVIDIA CUDA requis) :
+#   1. Décommenter tensorflow-gpu
+#   2. Commenter tensorflow
+#   3. Installer CUDA 11.2 et cuDNN 8.1
+#
+# Versions Python recommandées :
+#   - Python 3.8, 3.9, ou 3.10
+#   - Python 3.11+ peut avoir des problèmes avec TensorFlow 2.10
+#
+# Installation minimale (juste preprocessing) :
+#   pip install numpy pandas tqdm
+#
+# Installation complète (avec GPU) :
+#   pip install tensorflow-gpu==2.10.1 numpy pandas tqdm matplotlib scikit-learn
+#
+# ============================================================================
