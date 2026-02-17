@@ -41,6 +41,24 @@ pip-delete-this-directory.txt
 .venv_37/
 venv/
 venv_tf1/
+venv37
+
+# Données réelles brutes (trop lourdes + confidentielles)
+data/real/eicu/raw/
+
+# Données générées (optionnel)
+data/fake/
+data/checkpoint/
+
+# Données générées par le GAN
+data/fake/epoch*/
+data/fake/vae.npz
+data/fake/gen_data.npz
+
+# Garder uniquement le placeholder
+!data/fake/.gitkeep
+# Logs TensorFlow
+logs/
 
 # Unit test / coverage reports
 htmlcov/

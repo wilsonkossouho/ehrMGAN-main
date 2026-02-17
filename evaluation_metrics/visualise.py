@@ -11,7 +11,7 @@ import pickle
 def visualise_gan(data_continuous_real, data_continuous_syn, data_discrete_real, data_discrete_syn, inx, num_dim=12, num_plot=10, SAVE_PATH="logs/"):
 
     # renorm
-    DATA_PATH = "data/real/mimic/"
+    DATA_PATH = "data/real/eicu/"
     min_val_con = np.load(os.path.join(DATA_PATH, "norm_stats.npz"))["min_val"]
     max_val_con = np.load(os.path.join(DATA_PATH, "norm_stats.npz"))["max_val"]
     data_continuous_real = renormlizer(data_continuous_real, max_val_con, min_val_con)
@@ -59,7 +59,7 @@ def visualise_gan(data_continuous_real, data_continuous_syn, data_discrete_real,
 def visualise_vae(data_continuous_real, data_continuous_syn, data_discrete_real, data_discrete_syn, inx, num_dim=8, num_plot=10, SAVE_PATH="logs/"):
 
     # renorm
-    DATA_PATH = "data/real/mimic/"
+    DATA_PATH = "data/real/eicu/"
     min_val_con = np.load(os.path.join(DATA_PATH, "norm_stats.npz"))["min_val"]
     max_val_con = np.load(os.path.join(DATA_PATH, "norm_stats.npz"))["max_val"]
     data_continuous_real = renormlizer(data_continuous_real, max_val_con, min_val_con)

@@ -6,7 +6,7 @@
 # ============================================================================
 # DEEP LEARNING - TensorFlow (pour EHR-M-GAN)
 # ============================================================================
-tensorflow==2.10.1          # Framework principal pour GAN
+tensorflow==2.10.1
 # Alternative pour GPU (choisir l'un ou l'autre) :
 # tensorflow-gpu==2.10.1
 

@@ -121,7 +121,7 @@ if __name__ == '__main__':
   
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--dataset', type=str, default="mimic", choices=['mimic','eicu','hirid'], help='The name of dataset used for training the networks.')
+    parser.add_argument('--dataset', type=str, default="eicu", choices=['eicu','mimic','hirid'], help='The name of dataset used for training the networks.')
 
     parser.add_argument('--batch_size', type=int, default=256, help='The batch size for training the model.')
     parser.add_argument('--num_pre_epochs', type=int, default=500, help='The number of epoches in pretraining the VAEs.')
